@@ -1,0 +1,14 @@
+-u
+-width(128) -h1
+-Ie:\bc4\include
+-ss16
+-si32
+-sl32
+-sp32
+-D__cdecl=
+-D_far=
+-D_pascal=
+-esym(534,printf,sprintf,fprintf)
+-esym(534,memset,memcpy)
+-esym(534,strcpy)
+-esym(534,fclose)

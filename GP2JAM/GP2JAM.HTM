@@ -1,0 +1,359 @@
+<html>
+<head>
+   <title>GP2JAM - Grand Prix 2 JAM to BMP Converter</title>
+   <meta name="Author" content="Trevor Kellaway">
+   <meta name="GENERATOR" content="Mozilla/2.01Gold (Win32)">
+</head>
+<body>
+
+<center><p><b><font SIZE=+2>GP2JAM - Grand Prix 2 JAM to BMP Converter</font></b></p></center>
+
+<center><p><b>Copyright (c) 1996 <i><a href="mailto:100331.2330@compuserve.com">Trevor
+Kellaway</a></i> (100331.2330@compuserve.com)</b></p></center>
+
+<center><p><b>V2.0 28th Sep 1996 </b></p></center>
+
+<center><p>
+<hr width="100%" ><font SIZE=-1>Please read this file as it contains lots
+of useful tips. Make sure you read it before sending me any E-mail questions!</font>
+</p></center>
+
+<center><p>[<a href="gp2jam.htm#Introduction">Introduction</a>] [<a href="gp2jam.htm#Installation">Installation</a>]
+[<a href="gp2jam.htm#Quick">Quick Start</a>] [<a href="gp2jam.htm#Important">Important</a>]
+[<a href="gp2jam.htm#Usage">Usage</a>]
+<br>[<a href="gp2jam.htm#Bitmaps">Bitmaps and Palettes</a>] [<a href="gp2jam.htm#Car">Car
+Images</a>] [<a href="gp2jam.htm#Helmets">Helmets</a>] [<a href="gp2jam.htm#Adverts">Adverts
+/ Billboards</a>]
+<br>[<a href="gp2jam.htm#Special">Special Images - E.g., Pit Crew</a>]
+[<a href="gp2jam.htm#Circuit">Circuit Specific Images</a>]
+<br>[<a href="gp2jam.htm#Known">Known Problems</a>] [<a href="gp2jam.htm#Pre">Pre-painted
+Car Sets / Images</a>] [<a href="gp2jam.htm#History">History</a>] [<a href="gp2jam.htm#Further">E-mail
+/ Further Info</a>]</p></center>
+
+<h2>
+<hr width="100%" >Introduction<a name="Introduction"></a></h2>
+
+<p>Grand Prix 2 (GP2) from Microprose stores its image files in a unique
+format, these files have the extension '.JAM' (referred to as 'JAM' files).
+</p>
+
+<p>GP2JAM is a DOS program which converts GP2 JAM files to .BMP files and
+back again. You will find these images in the <tt>X:\GP2\GAMEJAMS\</tt>
+directory and sub- directories on your hard disk (or CD-ROM drive), where
+<tt>X:</tt> is the drive letter where you installed the game or your CD-ROM
+drive letter. </p>
+
+<p>GP2JAM supports virtually all the JAM files (~200!). For example you
+can convert from a <tt>WILLIAMS.JAM</tt> file to a <tt>WILLIAMS.BMP</tt>.
+You can now use your favourite bitmap editor to modify the image and save
+it. Next you would convert the <tt>WILLIAMS.BMP</tt> back to <tt>WILLIAMS.JAM</tt>.
+</p>
+
+<p><b>Note: </b>You must have installed GP2 in either Medium or Full install
+mode for the modified JAM files to appear in the game. Minimum install
+mode will not work (even though it does actually copy the JAM files to
+your hard disk it doesn't seem to read them!). </p>
+
+<h2>
+<hr width="100%" >Installation<a name="Installation"></a></h2>
+
+<p>This distribution should include the following files: </p>
+
+<ul>
+<p><tt>GP2JAM.TXT &nbsp;&nbsp;A text version of the help file.
+<br>GP2JAM.HTM &nbsp;&nbsp;An HTML version of the help file.
+<br>GP2JAM.EXE &nbsp;&nbsp;The converter program.
+<br>32RTM.EXE &nbsp;&nbsp;&nbsp;32-bit DOS extender (not reqd. for WFW/W95/NT),
+only DOS.
+<br>DPMI32VM.OVL 32-bit DOS extender (not reqd. for WFW/W95/NT), only DOS.</tt>
+</p>
+</ul>
+
+<p>Copy <tt>GP2JAM.EXE</tt> to any directory on your hard disk, I recommend
+that you create a new directory (say '<tt>C:\JAM</tt>'), you can then keep
+all your updated JAMs and BMPs there without cluttering up the game directories
+(this also allows you to reinstall the game without losing your images).
+If you are running under straight DOS (not WFW/W95/NT) then you will need
+to copy <tt>32RTM.EXE</tt> and <tt>DPMI32VM.OVL</tt> to the same directory
+as <tt>GP2JAM.EXE</tt>. </p>
+
+<h2>
+<hr width="100%" ><a name="Quick"></a>Quick Start </h2>
+
+<p>Here is a quick tutorial on how to start painting the Williams. </p>
+
+<p>Change directory to where you put <tt>GP2JAM.EXE</tt> ('<tt>C:\JAM</tt>').
+Convert the Williams JAM file to a bitmap by typing the following at a
+DOS command prompt: </p>
+
+<pre>        GP2JAM -jC:\GP2\GAMEJAMS\WILLIAMS.JAM </pre>
+
+<p>This should create a <tt>WILLIAMS.BMP</tt> in the current directory
+(<b>Note:</b> If the game is stored on a different drive then add the appropriate
+drive letter at the front of the filename). </p>
+
+<p>Now startup your favourite bitmap editor (Paint Shop Pro is a good one,
+much better than Windows/W95 Paintbrush) and load the <tt>WILLIAMS.BMP</tt>.
+You should see a picture of the different panels of the car. Paint the
+car and then save the <tt>WILLIAMS.BMP</tt> again. </p>
+
+<p>Now back at the DOS prompt convert the file back to a JAM: </p>
+
+<pre>        GP2JAM -bWILLIAMS.BMP -jC:\GP2\GAMEJAMS\WILLIAMS.JAM </pre>
+
+<p>That should be it. Startup GP2 and admire your work! </p>
+
+<h2>
+<hr width="100%" >Important<a name="Important"></a></h2>
+
+<p>All of the JAM files have a unique identity (ID) encoded in them so
+you can't copy a <tt>WILLIAMS.JAM</tt> over the top of say a <tt>BENETTON.JAM</tt>,
+you will get a transparent (invisible) car! GP2JAM will always display
+the actual JAM ID when converting to help you identify which file you are
+manipulating, this only becomes useful if you start renaming the JAM files
+in your directory (don't rename the games JAM files!). </p>
+
+<h2>
+<hr width="100%" >Usage<a name="Usage"></a></h2>
+
+<pre>GP2JAM [-h?v] [-y] [-bFILENAME.BMP] [-jFILENAME.JAM] </pre>
+
+<ul>
+<pre>-h|-? Display this usage message.
+-v Display the version number &amp; contact information.
+-i Display information about conversion process. </pre>
+
+<pre>-jFNAME.JAM     Set the JAM filename to be 'FNAME.JAM'.
+-bFNAME.BMP     Set the BMP filename to be 'FNAME.BMP'. </pre>
+
+<pre>-y Automatically answer all questions with 'Yes'. </pre>
+</ul>
+
+<p>When converting from a JAM to BMP you need only specify the JAM filename:
+</p>
+
+<pre>        GP2JAM -jWILLIAMS.JAM </pre>
+
+<p>This will automatically create a <tt>WILLIAMS.BMP</tt> (based on the
+JAM ID), if the <tt>WILLIAMS.BMP</tt> file already exists you will be asked
+if you wish to overwrite it. You can turn off these prompts by using the
+'-y' option which will automatically respond 'Yes' to all prompts. </p>
+
+<p>If you wanted to use a different bitmap filename specify it after the
+JAM filename: </p>
+
+<pre>        GP2JAM -jC:\GP2\GAMEJAMS\WILLIAMS.JAM -bCAR1.BMP </pre>
+
+<p>To convert back from a BMP to a JAM file you must specify both filenames
+and the BMP filename must be first: </p>
+
+<pre>        GP2JAM -bWILLIAMS.BMP -jC:\GP2\GAMEJAMS\WILLIAMS.JAM -y </pre>
+
+<p>This will update the existing <tt>WILLIAMS.JAM</tt> file (Note: the
+'-y' option was present to automatically respond to the overwrite prompt).
+</p>
+
+<p><b>Note:</b> The destination JAM file <b>*must*</b> already exist, GP2JAM
+only updates the original JAM file from BMP, it never actually creates
+the JAM file. </p>
+
+<p>You can display the usage message by starting GP2JAM either with no
+command line options, or use either '-?', or '-h'. </p>
+
+<p>To find out which version of GP2JAM you have use the '-v' option, this
+also displays the author's E-mail address and web site URL. </p>
+
+<p>You can obtain a list of the all the JAM files supported by GP2JAM by
+using the '-f' option. </p>
+
+<h2>
+<hr width="100%" >Bitmaps <a name="Bitmaps"></a>and Palettes</h2>
+
+<p>When you first convert an original game JAM file GP2JAM may display
+the following warning: </p>
+
+<p><i>'Warning: The image contains unique colours which can't be mapped
+to GP2JAM's standard palette, these will be mapped to the nearest colour
+available.'</i> </p>
+
+<p>Don't worry about this, GP2JAM uses a different fixed palette to that
+of the images in the game and maps the game colours to the nearest available
+ones in its palette. When you perform a later update of an image you've
+edited previously you won't get this warning. </p>
+
+<p>When saving the BMP image don't change the colour depth (256) or change
+the image size. </p>
+
+<p>You can use any of the colours from the fixed palette but <b>*don't*
+</b>change the palette as this is fixed by the game and the BMP just contains
+a copy (changing the palette won't have any effect in the game). Make sure
+you save the bitmap RGB encoded (not RLE or OS/2 encoded). </p>
+
+<p>Don't over paint the background (dull green) colour or move any of the
+image parts. A good way to paint large areas is to use the selective colour
+eraser tool which is available in most good painting packages. </p>
+
+<h2>
+<hr width="100%" >Car <a name="Car"></a>Images</h2>
+
+<p>For the cars the BMP has several small rectangles which are all one
+colour, these are the suspension arms. The car images also have a graduated
+set of rectangles in the top left hand side of the images, don't modify
+these as they are used to shade the car tyres when the car is viewed from
+a far distance. </p>
+
+<p>In the game some cars have high noses and some low noses, this information
+is hard coded within <tt>GP2.EXE</tt> and not in the JAM files so you can't
+modify this (I'll write a utility for this later). The internal cockpit
+colours (when viewed from the driving position) are also hard coded in
+<tt>GP2.EXE</tt>. A utility for modifying the cockpit colours is meant
+to be available on the Web but I haven't checked it out. </p>
+
+<p>The car numbers displayed in the game text screens (rather than the
+ones on the cars) also are hard coded within <tt>GP2.EXE</tt>, again a
+utility to modify these is available on the Web. </p>
+
+<p><b>Note:</b> When painting the car numbers you will notice there are
+two copies for both the front and rear wings. You must ensure that you
+place a copy of the lower number actually on the car as well as GP2 when
+it is running sometimes will use the image painted on the car rather than
+over paint it with the copy. </p>
+
+<h2>
+<hr width="100%" >Helmets<a name="Helmets"></a></h2>
+
+<p>The helmets are all stored in one file called <tt>HELMETS1.JAM</tt>.
+You will need to use the zoom option of you paint program as each helmet
+image is fairly small. <b>Note:</b> Don't paint over the graduated colours
+on the far left of the image, these are used to colour the helmet when
+it is viewed from a far distance. </p>
+
+<h2>
+<hr width="100%" >Adverts <a name="Adverts"></a>/ Billboards</h2>
+
+<p>There are two main files which contain the adverts, <tt>ADVERTS1.JAM</tt>
+and <tt>ADVERTS2.JAM</tt>. Each of these files contains a number of sub-images
+for different adverts. The game uses a fixed method of displaying these
+adverts at each track. The two files above are used at all the tracks,
+in addition to these though each track sub-directory (of <tt>\GP2\GAMEJAMS</tt>,
+e.g., <tt>PORJAMS</tt> for Portugal) has a file like <tt>POR_AD1.JAM</tt>
+(look for the <tt>_AD1</tt> in the name) and these contain track specific
+images. </p>
+
+<h2>
+<hr width="100%" >Special <a name="Special"></a>Images - E.g., Pit Crew</h2>
+
+<p>There are a number of special images which appear to be painted in strange
+colours, the pit crew for instance. </p>
+
+<p>A good example is the flag marshall images (<tt>FLAGS1.JAM</tt>, <tt>FLAGCHEQ.JAM</tt>),
+these all appear to have a blue flag. When the game runs it knows about
+this range of blue palette entries and maps these to the desired colour,
+normally this will be yellow or green for use when a crash occurs. You
+<b>*must* not</b> change these special colours, you can paint other parts
+of the image though you shouldn't use the special colour (blue in this
+case) anywhere on the image as this will also change colour! </p>
+
+<p>The pit crew are another special case. These are almost all totally
+updated by the game when it runs from fixed colours hard coded in <tt>GP2.EXE</tt>.
+I'm sure a utility to update these colours in <tt>GP2.EXE</tt> will be
+released at some stage. </p>
+
+<h2>
+<hr width="100%" >Circuit <a name="Circuit"></a>Specific Images</h2>
+
+<p>Within the <tt>\GP2\GAMEJAMS</tt> directory there are is a sub-directory
+for each track, within these directories are circuit specific images which
+include adverts, buildings and scenery. Be careful not to mix these files
+up with those in the main directory or another track sub-directory as many
+of these have duplicate names. </p>
+
+<h2>
+<hr width="100%" >Known <a name="Known"></a>Problems</h2>
+
+<p>GP2JAM has been tested with the European GP2 V1.0b and works fine in
+VGA and SVGA. </p>
+
+<p>There are a few JAM image filenames which GP2JAM can't uniquely identify,
+it will display these as &quot;????????&quot;. </p>
+
+<p>GP2JAM doesn't support the <tt>RCR*.JAM</tt> files, these are only images
+of cars and wouldn't be suitable for modifying anyway. </p>
+
+<h2>
+<hr width="100%" >Pre<a name="Pre"></a>-painted Car Sets / Images</h2>
+
+<p>Please <b>*don't*</b> send me the results of your painting, I'll get
+swamped with file E-mails otherwise! I won't be producing any car sets
+(I just write the converter, I never actually use it!), but some good ones
+are available on the web. </p>
+
+<p>Checkout Dave Gymer's web site: </p>
+
+<p><a href="http://www.gamesdomain.co.uk/dgymer/f1gp/">http://www.gamesdomain.co.uk/dgymer/f1gp/</a>
+
+<br><a href="ftp://www.gamesdomain.co.uk/pub/users/dgymer/f1gp/">ftp://www.gamesdomain.co.uk/pub/users/dgymer/f1gp/</a>
+</p>
+
+<p>Another good site is Pieter's Grand Prix 2 Home Page: </p>
+
+<p><a href="http://cervino.vol.it/GP2/">http://cervino.vol.it/GP2/</a>
+</p>
+
+<p><b>Note:</b> The JAM files don't compress at all, so if possible when
+creating a car set include the BMP files as they do compress (I recommend
+you create a <tt>JAMS.ZIP</tt> and a <tt>BMP.ZIP</tt> then the downloader
+can choose which one to download, the <tt>BMP.ZIP</tt> will be much smaller
+than the <tt>JAMS.ZIP</tt>). </p>
+
+<h3>
+<hr width="100%" >History<a name="History"></a></h3>
+
+<ul>
+<ul type=disc>
+<li><b>V1.0 18th Aug 1996</b> Initial version. Only supports car JAM files.</li>
+
+<li><b>V2.0 28th Sep 1996</b> All JAM files now supported. </li>
+</ul>
+</ul>
+
+<h3>
+<hr width="100%" >E-mail / Further <a name="Further"></a>Info</h3>
+
+<p>Please send any suggestions, comments, or bug reports (include the version
+of GP2JAM you are using and your Operating System details [DOS,WFW,W95,O/S2,NT])
+to the author <i><a href="mailto:100331.2330@compuserve.com">Trevor Kellaway</a></i>
+at: </p>
+
+<ul>
+<li>CompuServe: [100331,2330]</li>
+
+<li>Internet: 100331.2330@compuserve.com </li>
+</ul>
+
+<p>The current version of GP2JAM will always be available on my web page
+along with the current version of this help file. </p>
+
+<p><a href="http://ourworld.compuserve.com/homepages/tkellaway/">http://ourworld.compuserve.com/homepages/tkellaway</a>/
+</p>
+
+<p>It should also be available on CompuServe in <b>GO SPRTSIMS</b>, Lib
+#14 (Racing Circuits) as <tt>GP2JAM.ZIP</tt>. </p>
+
+<p><font SIZE=-1>This program may be freely copied and distributed, as
+long as it is not modified in any way, no fee is charged and this file
+is always included. This program is provided &quot;as is&quot; with no
+warranties expressed or implied. The author will not be held responsible
+for any losses incurred, either directly or indirectly by the use of this
+program. </font></p>
+
+<p><font SIZE=-1>This is *not* an Microprose product. If you have problems
+with the game then try it without using this program. </font></p>
+
+<p><font SIZE=-1>The author has no connection with Geoff Crammond or Microprose.
+</font></p>
+
+<p>&lt;&lt;End of document&gt;&gt; </p>
+
+</body>
+</html>
